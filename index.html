@@ -4,13 +4,27 @@
 <body>
 <h2>JavaScript Loops</h2>
 <p id="demo"></p>
+<button type="button" onclick="bai1()"> Bai 1 </button>
+<button type="button" onclick="bai2()"> Bai 2 </button>
 <script>
-    let text = "";
-    let i;
-    for (i = 0; i < 5; i++) {
-        text += "The number is " + i + "<br>";
+    function bai1() {
+        let text = "";
+        let i;
+        for (i = 0; i < 5; i++) {
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
     }
-    document.getElementById("demo").innerHTML = text;
+
+    function bai2(){
+        let num = prompt("Enter your number: ");
+        let total = 0;
+        let i = 1;
+        for (; i <= num; i +=1) {
+            total = total + i;
+        }
+        alert(total);
+    }
 </script>
 </body>
 </html>
